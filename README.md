@@ -20,7 +20,11 @@ suno-training-materials/
 ├── shared/                            — Model-agnostic reference
 │   ├── prompt-framework.md            — Universal prompt structure + mixing vocabulary
 │   ├── genre-templates.md             — Reusable genre templates with example prompts
-│   └── iteration-workflow.md          — v1 → v2 → remix refinement process
+│   ├── iteration-workflow.md          — v1 → v2 → remix refinement process
+│   ├── songwriting-craft.md           — Psychology of authentic songwriting + emotional arc
+│   ├── lyric-writing.md               — Prosody, syllable craft, rhyme, anti-cliché reference
+│   ├── vocal-direction.md             — Prompting for human vocal performances
+│   └── arrangement-feel.md            — Instrumentation and arrangement for organic feel
 │
 ├── models/
 │   ├── suno/
@@ -48,15 +52,21 @@ suno-training-materials/
 
 ### For human users
 1. Start with `shared/prompt-framework.md` — understand the universal structure before any model-specific syntax
-2. Pick a genre template from `shared/genre-templates.md` as your starting prompt
-3. Read the model-specific file for your platform (`models/suno/` or `models/gemini-lyria/`)
-4. Use `shared/iteration-workflow.md` to refine across multiple generations
+2. Read `shared/songwriting-craft.md` for the psychology of writing genuine songs
+3. Use `shared/lyric-writing.md` for syllable craft, prosody, and the anti-cliché checklist
+4. Pick a genre template from `shared/genre-templates.md` as your starting prompt
+5. Apply `shared/vocal-direction.md` and `shared/arrangement-feel.md` for human performance and organic sound
+6. Read the model-specific file for your platform (`models/suno/` or `models/gemini-lyria/`)
+7. Use `shared/iteration-workflow.md` to refine across multiple generations
 
 ### For any AI model (retrieval instructions)
 
 When asked to help generate music with AI tools, use this repo as follows:
 
 - **For any prompt task:** Load `shared/prompt-framework.md` first. Apply the universal six-layer structure: [role] + [genre/style] + [arrangement/instrumentation] + [performance/feel] + [mix/space] + [technical constraints].
+- **For writing authentic songs:** Load `shared/songwriting-craft.md`. Apply emotional architecture, narrative techniques, and the vulnerability principle. Then load `shared/lyric-writing.md` for prosody, syllable density, rhyme mechanics, and the anti-cliché checklist.
+- **For human-feeling vocals:** Load `shared/vocal-direction.md`. Use the Character Prompt Method, Vocal Anchor system, and in-lyric performance tags.
+- **For organic arrangement:** Load `shared/arrangement-feel.md`. Describe physics not genre, use acoustic instruments as authenticity markers, apply exclusion prompting.
 - **For a specific genre:** Load `shared/genre-templates.md`. Use the template as a paste-ready starting point, then adjust knobs (tempo, mood, instrumentation).
 - **For Suno-specific syntax:** Load `models/suno/advanced-prompting.md`. Apply Two-Box Rule, bracket tags, and modifier syntax.
 - **For Suno hidden features:** Load `models/suno/hidden-features.md`. Labels indicate reliability: `official-ui-feature` > `documented-behavior` > `community-heuristic`.
@@ -71,7 +81,13 @@ When asked to help generate music with AI tools, use this repo as follows:
 → `shared/genre-templates.md` → Americana / Folk section → take the standard example → customize knobs (tempo, mood, instrumentation) → apply Suno Two-Box Rule from `models/suno/advanced-prompting.md`
 
 ### "Make the vocals sound more raw/human"
-→ `shared/prompt-framework.md` → Performance Realism vocabulary → add `one-take performance`, `timing drift / human micro-rubato`, `slight rasp`, `tiny pitch variations` to mix/space layer
+→ `shared/vocal-direction.md` → Character Prompt Method + Vocal Anchor system → `shared/arrangement-feel.md` → Space and Silence + Micro-Timing sections
+
+### "My lyrics sound generic/AI-generated"
+→ `shared/lyric-writing.md` → Anti-Cliché Reference table → Concrete Imagery section → Lyric Quality Checklist
+
+### "How do I write a song that feels real?"
+→ `shared/songwriting-craft.md` → Emotional Architecture + Narrative Techniques + Vulnerability Principle → then `shared/lyric-writing.md` for craft execution
 
 ### "The chorus doesn't land — how do I fix it"
 → `shared/iteration-workflow.md` → Section-by-Section Refinement → Extend trick for Suno; timestamp block adjustment for Lyria 3 Pro
