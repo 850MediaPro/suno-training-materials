@@ -248,13 +248,16 @@ Use this vocabulary in the **mix/space** and **technical constraints** layers of
 
 ## Prompt Length Guidelines
 
-| Context | Target length |
-|---|---|
-| Simple clip / social post | 15–30 words |
-| Standard song (any model) | 60–150 words |
-| Production-grade brief (Suno) | 100–200 words in style box |
-| Timestamp-structured (Lyria 3 Pro) | 200–400 words total |
-| Loop-based / electronic genres | Under 100 words (more is not better here) |
+| Context | Target length | Hard limit |
+|---|---|---|
+| Simple clip / social post | 15–30 words / ~150 chars | — |
+| Standard song (any model) | 60–150 words / ~400–900 chars | — |
+| Production-grade Suno style box | 600–900 chars (~90–140 words) | **1,000 chars (platform-enforced)** |
+| Timestamp-structured (Lyria 3 Pro) | 200–400 words total | — |
+| Loop-based / electronic genres | Under 500 chars (~75 words) | — |
+
+<!-- model:suno -->
+> **model:suno** — The Suno Style box has a hard 1,000 character ceiling enforced by the UI. Prompts that exceed this are truncated, usually dropping the negatives at the end (which the model then includes anyway). Always count characters, not words. Mix-engineer vocabulary averages 7–9 characters per word, and a "200-word" prompt is typically 1,400–1,600 chars. See `models/suno/advanced-prompting.md` → "Hard Limits" section.
 
 ---
 

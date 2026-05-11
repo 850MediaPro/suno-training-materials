@@ -19,6 +19,40 @@ Suno's Custom mode has two separate input fields. They have different roles and 
 
 ---
 
+## Hard Limits — Style Box (1,000 Character Ceiling)
+
+**The Style box has a 1,000 character hard limit enforced by the Suno UI.** Prompts exceeding this are truncated or rejected. This is the single most violated constraint in community guides — most "production-grade" examples in circulation run 1,200 to 1,500 characters and silently lose their final descriptors (often the negatives, which sit at the end).
+
+| Target | Character count | Approximate word count |
+|---|---|---|
+| **Hard ceiling (platform-enforced)** | 1,000 chars | ~150 words |
+| **Safe production-grade target** | 600–900 chars | ~90–140 words |
+| **Tight target (loop / electronic)** | under 500 chars | ~75 words |
+| **Minimum viable** | 150 chars | ~25 words |
+
+### Why character count, not word count
+
+Mix-engineer vocabulary uses long compound noun phrases (`heavy rumbling 808 sub-bass`, `late-2020s Atlanta trap production`, `crystal-clear instrument separation`). Average descriptor length runs 7–9 characters per word once spaces are included. A 200-word "production-grade" prompt is typically 1,400–1,600 characters — 40–60% over the limit.
+
+### Rules for staying under 1,000 chars
+
+1. **Count characters, not words, before submitting.** Paste into any character counter or use `wc -m` in a shell.
+2. **Cut adjectives first.** `warm vintage analog tube` becomes `warm tube`. Each chained adjective costs ~7 chars and adds diminishing signal.
+3. **Cut negatives last but cut them.** Negatives are the most expensive layer per signal — each `no [thing]` is ~10–15 chars and AI may interpret listed elements as desired anyway. Keep 3–5 critical negatives, drop the rest.
+4. **Never put structural tags or line breaks in the Style box.** Both eat characters and trigger bleed (see warning above).
+5. **If you cannot fit it under 1,000 chars, you are over-specifying.** Pick the 4–7 highest-signal descriptors. The model handles the rest.
+
+### When the prompt is truncated
+
+If your output is missing instruments you specified or contains elements you negated, the prompt likely truncated mid-clause. Symptoms:
+- Negatives at the end of the prompt ignored (model includes what you excluded)
+- Final instruments not appearing in the mix
+- Mix/space descriptors ignored, model defaults to genre-typical production
+
+Trim and regenerate.
+
+---
+
 ## Framework Approaches
 
 ### GMIV Framework
@@ -326,5 +360,5 @@ one-take feel, intimate studio, slight tape warmth, 85 BPM, natural dynamics
 5. **Keep chorus shorter than verse.** Repeat one hook phrase at least twice.
 6. **Style box: 4–7 descriptors** is optimal for most genres. Electronic/loop genres: fewer.
 7. **Lyrics box handles micro-behavior.** Style box handles macro-character. Never swap roles.
-8. **Total Style box length:** 100–200 words for production-grade prompts; under 100 words for electronic/loop genres.
+8. **Total Style box length:** Hard ceiling is **1,000 characters** (platform-enforced). Target **600–900 characters** (~90–140 words) for production-grade prompts; under 500 characters for electronic/loop genres. Count characters, not words — mix-language descriptors average 7–9 chars per word and routinely push word-count-based prompts over the limit. See "Hard Limits" section above.
 9. **Always include at least a placeholder in the Lyrics box** to prevent style-box bleed.
