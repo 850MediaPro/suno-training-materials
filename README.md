@@ -82,8 +82,13 @@ suno-training-materials/
 │       ├── overview.md                — Lyria models, access points, SynthID, litigation
 │       └── prompting.md               — Framework, timestamp prompting, RealTime params
 │
+├── prompts/                           — Release-ready song packages (boxes + variants + playbook)
+│   └── 2026-07-04-dark-thirty-on-the-fourth.md
+│
 ├── changelog/
-│   └── 2026-04.md                     — Initial knowledge base creation log
+│   ├── 2026-04.md                     — Initial knowledge base creation log
+│   ├── 2026-05.md                     — Style box 1,000 char ceiling
+│   └── 2026-07.md                     — First prompts/ package (Dark-Thirty on the Fourth)
 │
 └── raw/                               — Original source documents (unmodified)
     ├── Becoming a Post-Production Engineer with Suno AI Music (Version 5).pdf
