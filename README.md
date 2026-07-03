@@ -83,12 +83,12 @@ suno-training-materials/
 │       └── prompting.md               — Framework, timestamp prompting, RealTime params
 │
 ├── prompts/                           — Release-ready song packages (boxes + variants + playbook)
-│   └── 2026-07-04-fourth-on-the-water.md
+│   └── 2026-07-04-fly-em-high.md
 │
 ├── changelog/
 │   ├── 2026-04.md                     — Initial knowledge base creation log
 │   ├── 2026-05.md                     — Style box 1,000 char ceiling
-│   └── 2026-07.md                     — First prompts/ package (Fourth on the Water)
+│   └── 2026-07.md                     — First prompts/ package (Fly 'Em High)
 │
 └── raw/                               — Original source documents (unmodified)
     ├── Becoming a Post-Production Engineer with Suno AI Music (Version 5).pdf
