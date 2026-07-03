@@ -10,6 +10,52 @@ This knowledge base treats AI music generation as a professional production disc
 
 ---
 
+## Output Contract for AI Assistants
+
+When producing Suno prompts on behalf of a user, follow these three rules without deviation. They govern output format and prompt construction, not reasoning.
+
+### 1. Two copy-paste blocks — nothing between them
+
+Deliver the result as exactly **two fenced code blocks**, back-to-back:
+
+1. **Style Box** — ready to paste into Suno's Style field
+2. **Lyrics Box** — ready to paste into Suno's Lyrics field
+
+The user's workflow is one click to copy each. Any commentary, failure-mode notes, mitigation tables, or caveats go **after** both blocks — never interleaved, never inside a block. Do not put headings, explanations, or prose between the two blocks. They must sit adjacent so the user can tap copy → paste → tap copy → paste without scrolling through analysis.
+
+### 2. No artist names anywhere in either box
+
+Never place a real artist, stage name, or band name inside the Style Box or Lyrics Box. This covers:
+
+- Primary style descriptions (`"like Bob Marley"`, `"Johnny Cash energy"`)
+- Bracket tags (`[Artist: X]`)
+- "In the style of X" phrasing
+- Seeded lyric lines that name a performer
+- Persona names that match a known artist
+
+Why:
+
+- **Suno v5+ filters or silently degrades prompts containing known artist names** (post-WMG settlement enforcement, November 2025 — see `models/suno/overview.md`)
+- **Artist names produce averaged stereotypes**, not specific qualities — "sing like Stapleton" lands on the most-averaged raspy male country, not on what makes Stapleton actually distinctive
+- **They create commercial exposure** for anyone who distributes the output
+
+Describe the physical sound instead: instrumentation, timbre, era, mix character, delivery style, groove feel. This rule **overrides** any "Artist Reference Tags" tables still present in `shared/genre-templates.md` — those tables are deprecated for output use and retained only as educational reference.
+
+### 3. 1000-character hard cap on the Style Box
+
+Suno silently truncates Style Box input past **1000 characters**. Truncation happens mid-phrase with no warning, so prompts that exceed the cap often produce garbage because the final exclusion block gets chopped off.
+
+**Target 600–900 characters** to leave headroom. Count characters before delivering. If the box exceeds 1000, cut in this priority order:
+
+1. **Redundant exclusions** — `no synth pads` and `no synthesizer bass` → keep one; merge where possible
+2. **Over-specified mic/room detail** — one spatial descriptor is enough (`close-miked intimate studio` covers what three separate room tags try to)
+3. **Near-duplicate mood adjectives** — cap mood descriptors at 1–2 total (per `shared/arrangement-feel.md`)
+4. **Genre-era stacking** — one era anchor only (`1970s Trenchtown roots reggae`, not `1970s 1980s Trenchtown Kingston roots reggae`)
+
+Do **not** cut: the genre anchor (opening phrase), the core instrument list, BPM/groove language, or the primary exclusion block. Those are load-bearing.
+
+---
+
 ## Directory Structure
 
 ```

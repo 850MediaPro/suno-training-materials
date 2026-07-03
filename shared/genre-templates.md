@@ -7,6 +7,8 @@ Reusable, model-agnostic prompt templates for common genres. Each template inclu
 
 For model-specific syntax (bracket tags for Suno, timestamp blocks for Lyria 3 Pro), see the model-specific files in `models/`.
 
+> **Deprecation notice — "Artist Reference Tags" tables below.** The `### Artist Reference Tags` subsections in the Americana/Folk and Country-Soul templates are retained for educational reference only. **Do not place artist names in any output Style Box or Lyrics Box** — see README → Output Contract, Rule 2. When an artist-style target would be useful, translate it into physical descriptors (timbre, instrumentation, era, mix character, delivery style) before delivery. Artist names trigger Suno's v5+ filter, collapse to averaged stereotypes, and create commercial exposure.
+
 ---
 
 ## Americana / Folk / Roots
