@@ -96,6 +96,22 @@ Fly 'em high.
 humming, oohs and ahs, scat vocals, autotune, synth pads, drum machines
 ```
 
+### Vocal Variant: Clean Powerful Tenor (Kyle's pick, 2026-07-03)
+
+Kyle heard the raspy takes and wanted the opposite: less rasp, clean and powerful tenor. Style Box swap (878 chars verified):
+
+```
+Clean powerful male tenor lead vocal, clear bright tone, full chest voice soaring on chorus peaks, strong sustained high notes, precise diction, controlled vibrato, audible breath, loose behind-the-beat phrasing, gang vocals shouting the hook on choruses only, instrumental intro with the lead vocal entering clean at the first verse, upbeat southern rock and country-soul anthem, telecaster grit through warm tube amps, greasy slide guitar fills, live drumkit with cracking snare, bass slightly behind the beat, Hammond organ swells, fiddle on the final chorus, 102 BPM driving groove, celebratory energy, live session feel, first-take energy, natural timing drift, close-miked vocal forward, warm tape saturation, full dynamic range, no raspy vocals, no gravel, no autotune, no synth pads, no drum machines, no humming, no oohs and ahs, no vocal ad-libs before the first verse
+```
+
+MANDATORY companion change: the Lyrics Box vocal anchor outweighs the style box, so the top line must also swap to:
+
+```
+[Vocal: male, clean powerful tenor, clear bright tone, strong sustained high notes, controlled vibrato, precise diction]
+```
+
+Notes: "no raspy vocals, no gravel" added because southern rock defaults to rasp and needs the explicit block. "no radio polish" removed (fights a clean tenor); "celebratory grit" became "celebratory energy" so the word grit stays scoped to the guitars. Add "raspy vocals, gravel" to the Exclude field too when running this variant.
+
 ---
 
 ## What Changed in v3
