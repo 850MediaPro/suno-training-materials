@@ -70,7 +70,8 @@ suno-training-materials/
 │   ├── songwriting-craft.md           — Psychology of authentic songwriting + emotional arc
 │   ├── lyric-writing.md               — Prosody, syllable craft, rhyme, anti-cliché reference
 │   ├── vocal-direction.md             — Prompting for human vocal performances
-│   └── arrangement-feel.md            — Instrumentation and arrangement for organic feel
+│   ├── arrangement-feel.md            — Instrumentation and arrangement for organic feel
+│   └── wedding-songs.md               — Occasion songs: the occasion is the setting, never the subject
 │
 ├── models/
 │   ├── suno/
